@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
+	<title>KDR</title>
+</head>
+<body class="blue lighten-5">
+  <form id="#door" class="" action="admin/login" method="post" onsubmit="return encode(this)">
+		<input type="text" name="user" value="user">
+		<input type="password" name="password" value="1234">
+		<input type="submit" name="submit" value="Enter">
+  </form>
+	<script type="text/javascript">
+	function encode(form){
+		form.password.value = sha1(form.password.value);
+		return true;
+	}
+	</script>
+</body>
+</html>

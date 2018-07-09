@@ -1,0 +1,16 @@
+RewriteEngine On
+
+#RewriteCond %{QUERY_STRING} transport=websocket [NC]
+#RewriteRule .* ws://127.0.0.1:8100/socket.io/$1 [P,L]
+#Header add Upgrade: "websocket"
+#Header add Connection: "upgrade"
+
+RewriteRule ^$ http://127.0.0.1:8100/ [P,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://127.0.0.1:8100/$1 [P,L]
+
+
+#RewriteCond %{REQUEST_URI}  ^/socket.io         [NC]
+#RewriteRule "^/socket.io" "ws://127.0.0.1:8100/socket.io/" [P,L]

@@ -1,0 +1,24 @@
+{
+  "name": "friz_engine_server",
+  "version": "1.0.0",
+  "description": "used for connect friz_engine_unity",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ./",
+    "start": "forever --uid friz_engine_server --killSignal=SIGTERM -c nodemon start ./",
+    "stop": "forever stop friz_engine_server"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "Marco Friz",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "es6-promise": "^4.2.4",
+    "express": "^4.14.0",
+    "mysql": "^2.15.0",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {}
+}
