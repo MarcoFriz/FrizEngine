@@ -1,10 +1,10 @@
 const express				= require("express");
 const bodyParser		= require("body-parser");
-const con 					= require('./lib/connect.js');
+const con 					= require('./lib/connect.js').Connect("juanbosc_snhgames");
 const Router				= express.Router();
 
-var indexFile 		= "../admin.html",
-		dashboardFile = "../dashboard.html"
+var indexFile 		= "/api/admin.html",
+		dashboardFile = "/api/dashboard.html"
 
 Router.use(bodyParser.json())
 Router.use(bodyParser.urlencoded({ extended: true}))

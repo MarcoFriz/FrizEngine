@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon ./",
-    "start": "forever --uid friz_engine_server --killSignal=SIGTERM -c nodemon start ./",
+    "start": "forever start --uid \"friz_engine_server\" -a -c nodemon index.js",
     "stop": "forever stop friz_engine_server"
   },
   "keywords": [
@@ -17,6 +17,7 @@
     "body-parser": "^1.18.3",
     "es6-promise": "^4.2.4",
     "express": "^4.14.0",
+    "js-sha1": "^0.6.0",
     "mysql": "^2.15.0",
     "socket.io": "^2.1.1"
   },
