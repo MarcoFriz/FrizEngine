@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon ./",
-    "start": "forever start --uid \"friz_engine_server\" -a -c nodemon index.js",
-    "stop": "forever stop friz_engine_server"
+    "start": "forever start --uid \"friz_engine_server\" -a index.js",
+    "stop": "forever stop friz_engine_server"	
   },
   "keywords": [
     "server"
